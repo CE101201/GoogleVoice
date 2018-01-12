@@ -10,7 +10,7 @@ contains() {
 }
 
 while true; do
-    result=$(curl -s 'https://www.google.com/voice/b/0/service/post' -H 'origin: https://www.google.com' ... --compressed)
+    result=$(curl -s )
     contains "$result" "error" || exit 0
     sleep 1.5
 done
