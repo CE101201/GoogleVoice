@@ -2,21 +2,20 @@
 keyerrorlogo='
 ==================================================================
 
-           --------- Google VoiceÉêÇë½Å±¾ ----------
-		   		   
-                                                 
+           --------- Google Voiceç”³è¯·è„šæœ¬ ----------
+		   		                                                   
 ==================================================================';
 
 clear
 echo "$keyerrorlogo";
-echo "ÇëÈ·±£ÌîĞ´µÄĞÅÏ¢×¼È·£¬Ìî´íÁË½Å±¾²»»áÓĞÈÎºÎÌáÊ¾¡£";
-echo "°´Enter¼ÌĞø";
+echo "è¯·ç¡®ä¿å¡«å†™çš„ä¿¡æ¯å‡†ç¡®ï¼Œå¡«é”™äº†è„šæœ¬ä¸ä¼šæœ‰ä»»ä½•æç¤ºã€‚";
+echo "æŒ‰Enterç»§ç»­";
 read
 
-echo "ÇëÊäÈëÄãµÄcURL(bash)"
+echo "è¯·è¾“å…¥ä½ çš„cURL(bash)"
 read curl
 
-echo "ÇëÊäÈëÄãÒªÉêÇëµÄGVºÅ£¨´¿Êı×Ö10Î»£¬Èç£º3859998880£©"
+echo "è¯·è¾“å…¥ä½ è¦ç”³è¯·çš„GVå·ï¼ˆçº¯æ•°å­—10ä½ï¼Œå¦‚ï¼š3859998880ï¼‰"
 read gv
 
 echo $curl > gv.txt
@@ -24,7 +23,7 @@ echo $curl > gv.txt
 sed -i 's/mid=2/mid=6/' gv.txt
 sed -i 's/true%5D/%22%2B1'$gv'%22%2Ctrue%2C%22%22%5D/' gv.txt
 
-echo "°´Enter¿ªÊ¼Ë¢ºÅ";
+echo "æŒ‰Enterå¼€å§‹åˆ·å·";
 read
 
 
@@ -35,11 +34,11 @@ for (( i=1; i>0; i++ ))
         b='[[null,null,"There was an error with your request. Please try again."]]';
 	if [[ "$a" != "$b" ]];
         then
-        echo "Ö´ĞĞÊ§°Ü/ÉêÇë³É¹¦";
-        echo "¹²Ö´ĞĞ $i ´Î";
+        echo "æ‰§è¡Œå¤±è´¥/ç”³è¯·æˆåŠŸ";
+        echo "å…±æ‰§è¡Œ $i æ¬¡";
         exit 0;
         else
-        echo "µÚ $i ´Î³¢ÊÔ "`date`;
+        echo "ç¬¬ $i æ¬¡å°è¯• "`date`;
 	fi
     sleep 0.5s;
 done
